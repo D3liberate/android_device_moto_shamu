@@ -161,6 +161,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.speaker=false \
     ro.audio.monitorRotation=true
 
+# Viper4Android entries
+PRODUCT_PROPERTY_OVERRIDES += \
+    lpa.decode=false \
+    lpa.releaselock=false \
+    lpa.use-stagefright=false \
+    tunnel.decode=false
+
+PRODUCT_COPY_FILES += \
+    device/moto/shamu/viper/Viper4Android.apk:system/app/Viper4Android/Viper4Android.apk \
+    device/moto/shamu/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
+
 # Audio effects
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
